@@ -12,5 +12,17 @@
 <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=800&q=80" alt="Tenerife Sunset" width="400" />
   <br />
   <button>Click Me</button>
+<script>
+  const img = document.querySelector("img");
+
+  // Если картинка уже загрузилась — сразу запускаем анимацию
+  if (img.complete) {
+    img.classList.add("show");
+  } else {
+    img.addEventListener("load", () => {
+      img.classList.add("show");
+    });
+  }
+</script>
 </body>
 </html>

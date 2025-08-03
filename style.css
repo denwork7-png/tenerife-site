@@ -85,3 +85,37 @@ section {
     text-align: center;
   }
 }
+/* Анимация появления */
+img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+/* Когда загрузится страница — добавим класс show */
+img.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Плавное наведение на кнопку */
+button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Анимация заголовка */
+h1 {
+  animation: zoomIn 1s ease-in;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
